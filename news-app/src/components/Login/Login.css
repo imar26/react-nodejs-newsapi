@@ -38,3 +38,14 @@
     color: #fff;
     border: 1px solid #fff;
 }
+.err {
+    color: red;
+    text-align: center;
+    margin: 25px 0;
+}
+.showIt {
+    display: block;
+}
+.hideIt {
+    display: none;
+}

@@ -1,7 +1,14 @@
 import React from 'react';
 import './Login.css';
+import { withRouter } from "react-router-dom";
 
-export default class Login extends React.Component {
+class Login extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            err: false
+        }
+    }
     login(event) {
         event.preventDefault();
         let username = this.refs.username.value;
@@ -16,9 +23,16 @@ export default class Login extends React.Component {
         fetch(baseUrl + "/login?username=" + username + "&password=" + password)
             .then((response) => {
                 if(response.ok) {
-                    console.log("Yes")
+                    this.props.history.push("/home");
                 } else {
-                    console.log("Here");
+                    this.setState({
+                        err: true
+                    });
+                    setTimeout(function() {
+                        this.setState({
+                            err: false
+                        });
+                    }.bind(this), 2500);
                 }
             }, (error) => {
                 console.log(error);
@@ -44,6 +58,7 @@ export default class Login extends React.Component {
                                     <input type="submit" className="submit btn btn-primary" value="Login" />
                                 </div>
                             </form>
+                            <h5 className={`err ${this.state.err ? 'showIt' : 'hideIt'} `}>Invalid Credentials</h5>
                         </div>
                     </div>
                 </div>
@@ -51,3 +66,5 @@ export default class Login extends React.Component {
         )
     };
 }
+
+export default withRouter(Login);
