@@ -5,8 +5,8 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 // Components
 import Header from './components/Header/Header';
-import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
+import SourceList from './components/SourceList/SourceList';
 // Routes
 import { Router, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
@@ -16,7 +16,8 @@ ReactDOM.render(
     <Router history={history}>
         <div>
             <Route path="/" component={Header} />
-            <Route exact path="/" component={Login} />
+            <Route exact path="/" component={App} />
+            <Route exact path="/listOfSources" component={SourceList} />
             <Route path="/" component={Footer} />
         </div>
     </Router>

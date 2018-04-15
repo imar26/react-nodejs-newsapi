@@ -23,7 +23,7 @@ class Login extends React.Component {
         fetch(baseUrl + "/login?username=" + username + "&password=" + password)
             .then((response) => {
                 if(response.ok) {
-                    this.props.history.push("/home");
+                    this.props.history.push("/listOfSources");
                 } else {
                     this.setState({
                         err: true
