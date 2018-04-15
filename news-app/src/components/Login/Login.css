@@ -18,7 +18,7 @@
     display: block;
     color: #fff;
 }
-.form-control:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+.form-control:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus, .btn-primary.focus, .btn-primary:focus {
     outline: 0;
     border-color: #ced4da;
     box-shadow: none;
@@ -33,7 +33,7 @@
     border: 1px solid #333333;
     padding: 7px 30px;
 }
-.button input:hover {
+.button input:hover, .button input:active, .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
     background-color: #333333;
     color: #fff;
     border: 1px solid #fff;
