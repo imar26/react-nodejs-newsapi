@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
                             <p>&copy; Copyrights. All rights reserved.</p>
                         </div>
                         <div className="col-md-6">
-                            <p className="credits">News API Credits: <a href="https://newsapi.org/" target="_blank">https://newsapi.org/</a></p>
+                            <p className="credits">News API Credits: <a href="https://newsapi.org/" target="_blank" rel="noopener noreferrer">https://newsapi.org/</a></p>
                         </div>
                     </div>
                 </div>
