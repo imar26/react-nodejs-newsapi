@@ -8,7 +8,7 @@ export default class Header extends React.Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <p>News App - Polis</p>
+                            <p>News App</p>
                         </div>
                     </div>
                 </div>
