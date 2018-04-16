@@ -1,12 +1,6 @@
-# News Application using React JS | Node.js | LowDB | RESP API
+# News Application using React JS | Node.js | LowDB | REST API
 
 This web application involves building a simple news application which fetches news articles from an external api vendor and display them in web application
-
-### Technologies Used
-* Node.js
-* React JS
-* LowDB
-* REST API
 
 ### Overview of the Application
 * This web application allows the user to login. Error handling has been done, incorrect username or password won't allow the user to login. For login, you can use -> (username: **akr**, password: **akr**)
@@ -29,7 +23,7 @@ node -v
 npm -v
 ```
 Links for reference:
-* [node.js](https://nodejs.org/en/download/package-manager/)
+* [install node.js](https://nodejs.org/en/download/)
 
 2. Clone the project from GitHub Repository and Install all the necessary packages
 
@@ -39,16 +33,22 @@ cd  news-app
 npm install
 ```
 
-2. Start node.js server -> the node.js server will run on localhost:5000
+2. Start node.js server
 
 ```sh
 node server.js
 ```
 
-3. Run the react application -> the application will run on localhost:3000
+3. Run the react application
 
 ```sh
 npm start
 ```
 
 4. Open your browser and go to [http://localhost:3000/](http://localhost:3000/)
+
+### Technologies Used
+* Node.js
+* React JS
+* LowDB
+* REST API
