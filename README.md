@@ -30,7 +30,7 @@ Links for reference:
 ```sh
 git clone https://github.com/imar26/react-nodejs-newsapi.git
 cd react-nodejs-newsapi
-cd  news-app
+cd news-app
 npm install
 ```
 
