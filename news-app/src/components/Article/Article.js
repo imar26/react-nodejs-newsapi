@@ -94,7 +94,7 @@ export default class Article extends React.Component {
                                         </div>
                                     </div>
                                 </div>
-                        } else if(imgUrl.indexOf('http') === 0) {
+                        } else {
                             return <div className="col-md-4" key={i}>
                                         <div className="article">                                        
                                             <div className="image">                                            
