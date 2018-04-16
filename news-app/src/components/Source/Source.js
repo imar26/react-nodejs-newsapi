@@ -27,11 +27,10 @@ export default class Source extends React.Component {
             .then((response) => {
                 return response.json();          
             }).then((data) => {
-                let savedArray = [];
                 for(let i=0; i<this.props.sources.length; i++) {
                     this.sourceArray.push(false);
                     for(let j=0; j<data.length; j++) {
-                        if(data[j].index == i) {
+                        if(data[j].index === i) {
                             this.sourceArray[i] = !this.sourceArray[i];
                         }
                     }
@@ -87,7 +86,7 @@ export default class Source extends React.Component {
                     <div className="col-md-12">
                         {
                             this.props.sources.map((source, i) => {
-                                let customUrl = "/source/" + `${source.id}`;
+                                let customUrl = "/topArticles/" + source.id;
                                 return <div className="source" key={i}>
                                             <span ref="sourceId">{i + 1}</span>
                                             <div className="add-source">

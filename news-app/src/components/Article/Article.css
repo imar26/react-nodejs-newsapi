@@ -1,0 +1,44 @@
+.article {
+    border-bottom: 1px dashed #000;
+    position: relative;
+    padding: 20px 5px;
+}
+
+span {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+}
+
+.article:last-child {
+    border-bottom: 0;
+}
+
+.details {
+    padding: 15px 0;
+}
+
+.details i {
+    font-size: 13px;
+    line-height: 19px;
+    padding-right: 15px;
+}
+.details p {
+    margin-top: 10px;
+}
+.details a {
+    background-color: #fff;
+    color: #333333;
+    border: 1px solid #333333;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.details a:hover {
+    background-color: #333333;
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+}

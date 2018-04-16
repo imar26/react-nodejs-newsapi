@@ -42,6 +42,7 @@ export default class SourceList extends React.Component {
                     <div className="row">
                         <div className="col-md-12">
                             <h2>List of Sources</h2>
+                            <div className="saved-articles-btn"><a href="">View Saved Articles</a></div>
                             <hr />
                             <br/>
                             <p>No sources are available</p>
