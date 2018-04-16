@@ -7,7 +7,7 @@ This web application involves building a simple news application which fetches n
 * Allowed user to choose (**add/remove**) 5 news sources of their own choice from the list available and display their top 10 articles. As per the requirement, the user won't be allowed to select more than 5 news sources
 * Allowed the user to save articles for future reference. The user can also view the list of saved articles
 
-![Demo](https://i.imgur.com/wRhvSSR.jpg)
+<img src="reactjs-nodejs-newsapi.gif?raw=true" width="100%">
 
 ### List of Pages and How to use the Application
 * Login Page -> The user can login into the application
