@@ -29,6 +29,7 @@ Links for reference:
 
 ```sh
 git clone https://github.com/imar26/react-nodejs-newsapi.git
+cd react-nodejs-newsapi
 cd  news-app
 npm install
 ```
@@ -36,7 +37,7 @@ npm install
 2. Start node.js server
 
 ```sh
-node server.js
+node index.js
 ```
 
 3. Run the react application
