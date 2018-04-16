@@ -27,15 +27,7 @@ export default class SavedArticles extends React.Component {
             })
             .then((response) => {
                 return response.json();          
-            }).then((data) => {
-                // for(let i=0; i<this.props.sources.length; i++) {
-                //     this.sourceArray.push(false);
-                //     for(let j=0; j<data.length; j++) {
-                //         if(data[j].index === i) {
-                //             this.sourceArray[i] = !this.sourceArray[i];
-                //         }
-                //     }
-                // }                
+            }).then((data) => {             
                 this.setState({
                     savedArticles: data
                 })                
