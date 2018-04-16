@@ -8,6 +8,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import SourceList from './components/SourceList/SourceList';
 import Articles from './components/Articles/Articles';
+import SavedArticles from './components/SavedArticles/SavedArticles';
 // Routes
 import { Router, Route } from 'react-router-dom';
 import createHistory from 'history/createBrowserHistory';
@@ -20,6 +21,7 @@ ReactDOM.render(
             <Route exact path="/" component={App} />
             <Route exact path="/listOfSources" component={SourceList} />
             <Route exact path="/topArticles/:sourceId" component={Articles} />
+            <Route exact path="/listOfSavedArticles" component={SavedArticles} />
             <Route path="/" component={Footer} />
         </div>
     </Router>

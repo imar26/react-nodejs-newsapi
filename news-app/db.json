@@ -5,22 +5,59 @@
       "password": "akr"
     }
   ],
-  "savedArticles": [],
+  "savedArticles": [
+    {
+      "source": {
+        "id": "national-geographic",
+        "name": "National Geographic"
+      },
+      "author": "Heather Brady",
+      "title": "Watch Two Men Do Gymnastics 500 Feet Above the Ground",
+      "description": "The pair had been planning to do so for years, and in February they finally got their chance.",
+      "url": "https://news.nationalgeographic.com/2018/04/slackline-alps-gymnastics-climb-ice-waterfalls-culture-spd/",
+      "urlToImage": "https://pmdvod.nationalgeographic.com/NG_Video/152/291/smpost_1523638685760.jpg",
+      "publishedAt": "2018-04-13T21:16:43Z"
+    },
+    {
+      "source": {
+        "id": "national-geographic",
+        "name": "National Geographic"
+      },
+      "author": "Liz Langley",
+      "title": "As Koalas Suffer From Chlamydia, A New Clue For Treatment",
+      "description": "Scientists may have discovered how antibiotics can better help Australian marsupials infected with the sexually transmitted disease.",
+      "url": "https://news.nationalgeographic.com/2018/04/animals-disease-health-koalas-australia/",
+      "urlToImage": "https://news.nationalgeographic.com/content/dam/news/2018/04/14/waq-wildlife-std/01-waq-wildlife-std-NationalGeographic_2682117.ngsversion.1523543978894.adapt.1900.1.jpg",
+      "publishedAt": "2018-04-14T04:00:00Z"
+    },
+    {
+      "source": {
+        "id": "aftenposten",
+        "name": "Aftenposten"
+      },
+      "author": null,
+      "title": "At vår frihetskamp blir brukt til å skape splid, er trist | Nancy Herz",
+      "description": "Jeg heier på guttene med minoritetsbakgrunn. Enten de kaller seg «skamløse» eller ikke, er de ønsket i debatten.",
+      "url": "https://www.aftenposten.no/meninger/debatt/i/21lXkx/At-var-frihetskamp-blir-brukt-til-a-skape-splid_-er-trist--Nancy-Herz#xtor=RSS-3",
+      "urlToImage": "https://ap.mnocdn.no/images/0adf3de1-e7c2-44e2-9fb2-214d3194aad0?fit=crop&q=80&w=1440",
+      "publishedAt": "2018-04-16T10:28:54Z"
+    }
+  ],
   "listOfSources": [
     {
-      "index": 0
+      "index": 1
     },
     {
-      "index": 3
+      "index": 2
     },
     {
-      "index": 12
+      "index": 33
     },
     {
-      "index": 32
+      "index": 34
     },
     {
-      "index": 80
+      "index": 81
     }
   ]
 }

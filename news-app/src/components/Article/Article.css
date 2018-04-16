@@ -8,6 +8,8 @@ span {
     position: absolute;
     top: 20px;
     left: 5px;
+    margin-right: 5px;
+    word-break: break-all;
 }
 
 .article:last-child {
@@ -28,17 +30,23 @@ span {
 }
 .details a {
     background-color: #fff;
-    color: #333333;
+    color: #333333 !important;
     border: 1px solid #333333;
     padding: 6px 12px;
     font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
+    margin-right: 15px;
+    cursor: pointer;
 }
 
 .details a:hover {
     background-color: #333333;
-    color: #fff;
+    color: #fff !important;
     border: 1px solid #fff;
     text-decoration: none;
+}
+
+.article span:empty {
+    display: none;
 }

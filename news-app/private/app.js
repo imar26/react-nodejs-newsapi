@@ -32,6 +32,28 @@ module.exports = function(app) {
         }
     });
 
+    app.get("/getListOfSavedArticles", function(req, res) {
+        let savedArticles = db.get('savedArticles').value();
+
+        if(savedArticles) {
+            res.status(200).json(savedArticles);
+        } else {
+            res.status(404).json({message: "No saved articles available"});
+        }
+    });
+
+    app.post("/saveArticle", function(req, res) {
+        let savedArticles = db.get('savedArticles')
+            .push(req.body)
+            .write()
+
+        if(savedArticles) {
+            res.status(200).json({message: "Article saved successfully"});
+        } else {
+            res.status(403).json({message: "Cannot save article"});
+        }
+    });
+
     app.post("/listSources", function(req, res) {
         let index = req.body.index;
         let sources = db.get('listOfSources').value();
