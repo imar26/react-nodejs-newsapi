@@ -22,6 +22,16 @@ module.exports = function(app) {
         }
     });
 
+    app.get("/getListSources", function(req, res) {
+        let sources = db.get('listOfSources').value();
+
+        if(sources) {
+            res.status(200).json(sources);
+        } else {
+            res.status(404).json({message: "No sources available in the list"});
+        }
+    });
+
     app.post("/listSources", function(req, res) {
         let index = req.body.index;
         let sources = db.get('listOfSources').value();

@@ -1,14 +1,45 @@
 import React from 'react';
 import './Source.css';
-import Toggle from 'react-toggle';
 
 export default class Source extends React.Component {
+    sourceArray = [];
     constructor(props) {
-        super(props);
+        super(props);                      
 
         this.state = {
-            isAddedToSource: false
+            isAddedToSource: this.sourceArray
         }
+    }
+    componentDidMount() {
+        var baseUrl = "";
+        if(process.env.NODE_ENV === 'development') {
+            baseUrl = "http://localhost:5000";
+        } else {
+            baseUrl = "";
+        }
+        fetch(baseUrl + "/getListSources", {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then((response) => {
+                return response.json();          
+            }).then((data) => {
+                let savedArray = [];
+                for(let i=0; i<this.props.sources.length; i++) {
+                    this.sourceArray.push(false);
+                    for(let j=0; j<data.length; j++) {
+                        if(data[j].index == i) {
+                            this.sourceArray[i] = !this.sourceArray[i];
+                        }
+                    }
+                }                
+                this.setState({
+                    isAddedToSource: this.sourceArray
+                })
+            });
     }
     sourceToggle(index) {
         var baseUrl = "";
@@ -28,10 +59,18 @@ export default class Source extends React.Component {
                 },
                 body: JSON.stringify(data)
             }).then((response) => {
-                if(response.ok) {                    
-                    this.setState({
-                        isAddedToSource: !this.state.isAddedToSource
-                    });
+                if(response.ok) {
+                    
+                    for(let i=0; i<this.sourceArray.length; i++) {
+                        if(index === i) {
+                            this.sourceArray[i] = !this.sourceArray[i];
+
+                            this.setState({
+                                isAddedToSource: this.sourceArray
+                            });
+                        }
+                    }
+                    
                     return response.json();
                 } else {
                     return response.json();
@@ -41,8 +80,6 @@ export default class Source extends React.Component {
             });        
     }
 
-    // Check by making only particular button toggle not all
-    // Check after adding 5 sources -> alert comes / button does not toggle
     render() {
         return(
             <div className="container">
@@ -55,20 +92,14 @@ export default class Source extends React.Component {
                                             <span ref="sourceId">{i + 1}</span>
                                             <div className="add-source">
                                                 {
-                                                    this.state.isAddedToSource ? 
-                                                    <a onClick={() => this.sourceToggle(i)}>Remove Source</a> : 
-                                                    <a onClick={() => this.sourceToggle(i)}>Add Source</a>
+                                                    this.state.isAddedToSource[i] ? 
+                                                    <a className="remove" onClick={() => this.sourceToggle(i)}>Remove Source</a> : 
+                                                    <a className="add" onClick={() => this.sourceToggle(i)}>Add Source</a>
                                                 }
-                                                
-                                                {/* <Toggle
-                                                    id={`source-${i}`}
-                                                    defaultChecked={this.state.isAddedToSource}
-                                                    onChange={() => this.addToSources(i)} 
-                                                /> */}
                                             </div>
                                             <h4>
                                                 {
-                                                    this.state.isAddedToSource ? 
+                                                    this.state.isAddedToSource[i] ? 
                                                     <a href={customUrl}>{source.name}</a> : 
                                                     `${source.name}`
                                                 }                                                
