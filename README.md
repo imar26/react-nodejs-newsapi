@@ -7,6 +7,8 @@ This web application involves building a simple news application which fetches n
 * Allowed user to choose (**add/remove**) 5 news sources of their own choice from the list available and display their top 10 articles. As per the requirement, the user won't be allowed to select more than 5 news sources
 * Allowed the user to save articles for future reference. The user can also view the list of saved articles
 
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/rTNWz"><a href="//imgur.com/rTNWz"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
 ### List of Pages and How to use the Application
 * Login Page -> The user can login into the application
 * List of Sources -> The application lists down a total of 134 news sources. User has the option to select their own 5 news sources by clicking on either **Add Source** / **Remove Source** button. Once the user select a news source, the title of the source turns into a link, and clicking on that will redirect the user to the articles page where the top 10 articles for that particular source is listed
@@ -30,7 +32,6 @@ Links for reference:
 ```sh
 git clone https://github.com/imar26/react-nodejs-newsapi.git
 cd react-nodejs-newsapi
-cd news-app
 npm install
 ```
 
