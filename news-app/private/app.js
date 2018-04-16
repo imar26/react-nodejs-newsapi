@@ -22,6 +22,54 @@ module.exports = function(app) {
         }
     });
 
+    app.post("/listSources", function(req, res) {
+        let index = req.body.index;
+        let sources = db.get('listOfSources').value();
+                
+        let addSources;
+        if(sources.length === 0) {
+            addSources = db.get('listOfSources')
+                .push({index: req.body.index})
+                .write()
+
+            if(addSources) {
+                res.status(200).json({message: "Source added successfully"});
+            } else {
+                res.status(403).json({message: "Cannot add source"});
+            }
+        } else {
+            var found = sources.some(function (el) {
+                return el.index === index;
+            });
+
+            if (!found) {
+                if(sources.length === 5) {
+                    res.status(403).json({message: "Cannot add more than 5 sources"});
+                } else {
+                    addSources = db.get('listOfSources')
+                        .push({index: req.body.index})
+                        .write() 
+
+                    if(addSources) {
+                        res.status(200).json({message: "Source added successfully"});
+                    } else {
+                        res.status(403).json({message: "Cannot add source"});
+                    }
+                }
+            } else {
+                addSources = db.get('listOfSources')
+                    .remove({index: index})
+                    .write()
+
+                if(addSources) {
+                    res.status(200).json({message: "Source removed successfully"});
+                } else {
+                    res.status(403).json({message: "Cannot remove source"});
+                }
+            }            
+        }
+    });
+
     // Creating user in my lowdb by default
     db.defaults({
         users: [{

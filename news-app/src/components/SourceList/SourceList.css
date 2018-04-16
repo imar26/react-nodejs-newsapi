@@ -2,3 +2,22 @@
     margin-top: 40px;
     margin-bottom: 40px;
 }
+.saved-articles-btn {
+    position: absolute;
+    right: 15px;
+    top: 5px;    
+}
+
+.saved-articles-btn a {
+    background-color: #fff;
+    color: #333333;
+    border: 1px solid #333333;
+    padding: 7px 30px; 
+}
+
+.saved-articles-btn a:hover {
+    background-color: #333333;
+    color: #fff;
+    border: 1px solid #fff;
+    text-decoration: none;
+}

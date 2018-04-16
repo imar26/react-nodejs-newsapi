@@ -27,8 +27,10 @@ export default class SourceList extends React.Component {
             return(
                 <div className="list-sources container">
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-md-12">
                             <h2>List of Sources</h2>
+                            <div className="saved-articles-btn"><a href="">View Saved Articles</a></div>
+                            <hr />
                             <Source sources={this.state.sourceList} />
                         </div>
                     </div>
@@ -38,8 +40,10 @@ export default class SourceList extends React.Component {
             return(
                 <div className="list-sources container">
                     <div className="row">
-                        <div className="col-md-6">
+                        <div className="col-md-12">
                             <h2>List of Sources</h2>
+                            <hr />
+                            <br/>
                             <p>No sources are available</p>
                         </div>
                     </div>
